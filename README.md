@@ -38,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(204);
     exit;
 }
-//science
 $method = $_SERVER['REQUEST_METHOD'];
 
 switch ($method) {
@@ -81,9 +80,8 @@ switch ($method) {
 Can you see how I defined the method GET, POST, DELETE
 
 
-```php
-
 ### Define the connection 
+```php
 <?php
 
 $host = "localhost";
