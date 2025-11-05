@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="../css/app.css" >
+</head>
+<body>
+
+<main class="container">
+    <header>
+        <h1>Gestión de Usuarios</h1>
+        <button id="btnNuevo" class="btn-primary">Nuevo usuario</button>
+    </header>
+
+    <section>
+        <table id="tablaUsuarios">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+</main>
+
+<!-- Modal de nuevo usuario -->
+<dialog id="modalUsuario" class="modal">
+    <form id="formUsuario" class="form">
+        <h2>Nuevo Usuario</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <label for="rol">Rol:</label>
+        <select id="rol" name="rol" required>
+            <option value="General">General</option>
+            <option value="Admin">Admin</option>
+        </select>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-primary">Guardar</button>
+            <button type="button" id="btnCerrar" class="btn-secondary">Cancelar</button>
+        </div>
+    </form>
+</dialog>
+
+<script src="/src/res/js/App.js"></script>
+</body>
+</html>
